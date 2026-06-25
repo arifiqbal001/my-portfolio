@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0B2A1E; /* Dark Green */
+  --foreground: #ffffff; /* Crisp White */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #061911;
+}
+::-webkit-scrollbar-thumb {
+  background: #11422c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #195a3d;
+}
+
+/* GSAP Scroll utilities */
+html.lenis, html.lenis body {
+  height: auto;
+}
